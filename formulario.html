@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<header>
+		<div class="encabezado">
+			<img src="assets/canada.jpg" class="foto__canada" alt="Imagen Canada">
+			<a href="index.html" class="btn__volver"><i class="fa fa-arrow-left"></i> Volver</a>
+		</div>
+	</header>
+	<main>
+		<form action="" class="formulario" id="formulario">
+
+			<div class="formulario__grupo" id="grupo__nombre">
+				<label for="nombre" class="formulario__label">Nombre</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Nombre">
+					<span id="mensaje"></span>
+				</div>
+			</div>
+			<div class="formulario__grupo" id="grupo__direccion">
+				<label for="direccion" class="formulario__label">Direccion</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="direccion" id="direccion"
+						placeholder="Direccion">
+					<span id="mensaje"></span>
+				</div>
+			</div>
+			<div class="formulario__grupo" id="grupo__ciudad">
+				<label for="ciudad" class="formulario__label">Ciudad</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="ciudad" id="ciudad" placeholder="Ciudad">
+					<span class="mensaje"></span>
+				</div>
+			</div>
+			<div class="formulario__grupo" id="grupo__telefono">
+				<label for="telefono" class="formulario__label">Telefono</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="Telefono">
+					<span id="mensaje"></span>
+				</div>
+			</div>
+			<div class="formulario__grupo" id="grupo__correo">
+				<label for="correo" class="formulario__label">Correo</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="correo" id="correo" placeholder="Correo">
+					<span id="mensaje"></span>
+				</div>
+			</div>
+			<div class="formulario__grupo" id="grupo__edad">
+				<label for="edad" class="formulario__label">Edad</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="edad" id="edad" placeholder="Edad">
+				</div>
+			</div>
+
+			<div class="formulario__grupo formulario__grupo-btn-enviar">
+				<p id="mensaje1"></p>
+				<button type="submit" class="formulario__btn">Enviar</button>
+			</div>
+		</form>
+	</main>
+	<script>
+
+		const formulario = document.getElementById('formulario');
+		const inputs = document.querySelectorAll('#formulario input');
+
+
+		formulario.addEventListener('submit', (e) => {
+
+			inputs.forEach((input) => {
+
+				if (inputs[0].value === "" || inputs[1].value === "" || inputs[2].value === "" || inputs[3].value === "" || inputs[4].value === "" || inputs[5].value === "") {
+
+					document.getElementById("mensaje1").innerHTML = "Debe de llenar todos los campos"
+					e.preventDefault();
+				}
+				else {
+					document.getElementById("mensaje1").innerHTML = "";
+					e.preventDefault();
+					formulario.reset();
+				}
+			})
+
+		})
+
+	</script>
+</body>
+
+</html>

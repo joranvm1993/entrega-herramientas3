@@ -1,0 +1,215 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    width: 100%;
+    height: 70px;
+    background-color: rgb(216, 26, 26);
+}
+div.row{
+    margin-right: 0px;
+ }
+ 
+ div.container-fluid{
+    padding-right: 0px;
+ }
+
+.imagen-canada{
+    width: 100%;
+    height: 350px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.bandera-canada{
+    width: 70px;
+    border-radius: 50%;
+}
+
+.nav-brand{
+    margin: 15px;
+    margin-left: 70px;
+    float: left;
+    width: 70px;
+    transition: all 200ms;
+}
+.nav-brand:hover{
+    transform: scale(1.2, 1.2);
+}
+.menu {
+    float: right;
+    height: 70px;
+    background: transparent;
+}
+.menu ul li {
+    font-size: 24px;
+    display:inline-block;
+    margin: 0px 120px 0px 20px;
+    letter-spacing: 1px;
+    line-height: 75px;
+    text-decoration: none;
+    list-style: none;
+}
+.menu ul li a {
+    display: block;
+    color: white;
+    transition: all 200ms;
+    
+}
+
+.menu ul li a:hover{
+    transform: scale(1.2, 1.2);
+}
+#sidebar {
+    float: left;
+    padding: 20px;
+    width: 200px;
+    height: 550px;
+    background: rgb(216, 26, 26);
+    text-align: center;
+}
+
+#sidebar ul li{
+    display: block;
+    color: rgb(230, 230, 230, .9);
+    text-align: center;
+    padding: 15px 10px;
+    border-bottom: 5px solid rgb(100, 100, 100, .3);
+    transition: all 200ms;
+}
+#sidebar ul li:hover{
+    transform: scale(1.3, 1.3);  
+}
+#content{
+    text-align: center;
+    margin: auto;
+}
+
+footer{
+    width: 100%;
+    height: 30px;
+    background-color: rgb(12, 12, 12);
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+    color:white ;
+}
+
+#titulo{
+    text-align: center;
+    margin-top: 35px;
+}
+
+.foto__canada {
+    width: 100%;
+    height: 350px;
+}
+
+.btn__volver {
+    margin-left: 12px;
+}
+
+.formulario {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+main {
+	max-width: 800px;
+	width: 90%;
+	margin: auto;
+	padding: 40px;
+}
+
+.formulario {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+
+.formulario__grupo-input {
+	position: relative;
+}
+
+.formulario__input {
+	width: 100%;
+	background: rgb(229, 191, 191);
+	border: 3px solid transparent;
+	border-radius: 3px;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 40px 0 10px;
+	transition: .3s ease all;
+}
+
+.formulario__input:focus {
+	border: 3px solid #0075FF;
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+}
+.formulario__mensaje-activo {
+    display: none;
+} 
+.formulario__mensaje {
+	height: 45px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: block;
+}
+
+.formulario__mensaje p {
+    text-align: center;
+}
+
+
+.formulario__grupo-btn-enviar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.formulario__btn {
+	height: 45px;
+	line-height: 45px;
+	width: 30%;
+	background: #000;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: .1s ease all;
+}
+.formulario__mensaje-exito {
+	font-size: 14px;
+	color: #119200;
+	/* display: none; */
+}
+
+/* .formulario__mensaje-exito-activo {
+	display: block;
+} */
+.formulario__btn:hover {
+	box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+}
+.mesaje1,
+.formulario__grupo-btn-enviar {
+	grid-column: span 2;
+}
+
+.formulario__grupo-btn-enviar p{
+    font-size: 25px;
+    color: red
+}
